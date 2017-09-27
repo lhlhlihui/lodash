@@ -8,13 +8,13 @@
       body > p:first-child {
         color: red;
       }
-      p[class="a"]:hover {
+      p.a:hover {
         color: red;
       }
-      p[class="a"]:focus {
+      p.a:focus {
         color: blue;
       }
-      p[class="a"]:active {
+      p.a:active {
         color: green;
       }
       body > p > span:first-child {
@@ -41,7 +41,7 @@
       a[href$=".pdf" i] {
         font-size:30px;
       }
-      div[class="a"] li:nth-child(n+4):nth-child(-n+7) {
+      .a li:nth-child(n+4):nth-child(-n+7) {
         color:red;
       }
       /* 
@@ -49,31 +49,22 @@
         color:black;
       } 
       */
-      div[class="b"] li:nth-child(-n+25) {
+      .b li:nth-child(-n+25) {
         color: red;
       }
-      div[class="b"] li:nth-child(n+65) {
+      .b li:nth-child(n+65) {
         color: green;
       }
-      div[class="b"] li:nth-child(-n+50):nth-child(n+35) {
+      .b li:nth-child(-n+50):nth-child(n+35) {
         color: blue;
       }
-      div[class="c"] li {
+      .c li {
         color: red;
       }
-      div[class="c"] li:nth-child(2n+4) {
-        color: blue;
-      }
-      div[class="c"] li:nth-child(3n+6) {
-        color: blue;
-      }
-      div[class="c"] li:nth-child(5n+10) {
-        color: blue;
-      }
-      div[class="c"] li:nth-child(7n+14) {
-        color: blue;
-      }
-      div[class="c"] li:nth-child(11n+22) {
+      .c li:nth-child(2n+4),
+      .c li:nth-child(3n+6),
+      .c li:nth-child(5n+10),
+      .c li:nth-child(7n+14) {
         color: blue;
       }
       div[class="c"] li:first-child {
