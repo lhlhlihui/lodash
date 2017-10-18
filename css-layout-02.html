@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            min-width: 480px;
+            overflow: scroll;
+        }
+
+        #a {
+            width: 330px;
+            height: 330px;
+            border-right: blue 10px solid;
+            border-bottom: blue 10px solid;
+        }
+
+        #a > span {
+            float: left;
+            position: relative;
+            width: 100px;
+            height: 60px;
+            border-top: blue 10px solid;
+            border-left: blue 10px solid;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        #a > span:hover {
+            border: red 10px solid;
+            margin: 0 -10px -10px 0;
+            z-index: 5;
+        }
+
+        table {
+            margin-top: 100px;
+        }
+
+        td {
+            position: relative;
+            float: left;
+            margin: -12px -10px 0 0;
+            border: blue 10px solid;
+            width: 100px;
+            height: 100px;
+        }
+
+        td:hover {
+            border-color: red;
+            z-index: 5;
+        }
+
+        #b {
+            margin-top: 100px;
+            height: 330px;
+            width: 330px;
+            border-right: blue 10px solid;
+            border-bottom: blue 10px solid;
+            border: blue 5px solid;
+        }
+
+        #b > span {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 60px;
+            border: blue 5px solid;
+            text-align: center;
+            padding-top: 40px;
+            margin-right: -0.3em;
+        }
+
+        #b > span:hover {
+            border: red 10px solid;
+            margin: -9px -9px -11px -5px;
+            z-index: 5;
+        }
+
+        #c {
+            position: relative;
+        }
+
+        #d {
+            position: absolute;
+            font-size: 30px;
+            bottom: -300px;
+            margin: 100px 0 100px 50px;
+        }
+
+        #d:hover {
+            font-size: 72px;
+            transition: font-size 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+    </div>
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <div id="b">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+    </div>
+
+    <div id="c">
+        <span id="d">订阅博客</span>
+    </div>>
+</body>
+</html>
