@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            overflow: hidden;
+            padding: 0;
+            min-width: 584px;
+        }
+
+        td {
+            float: left;
+            height: 40px;
+            width: 50px;
+            border: black 2px solid;
+            position: relative;
+            margin: 0 1px 0 1px;
+        }
+
+        tr:hover {
+            background-color: gray;
+        }
+
+        td:hover::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2000px;
+            left: 0;
+            top: -1000px;
+            background-color: gray;
+            z-index: -4;
+        }
+
+        td:focus::before {
+            content: "";
+            position: absolute;
+            width: 2000px;
+            height: 100%;
+            left: -1000px;
+            top: 0;
+            background-color: gray;
+            z-index: -3;
+        }
+
+        td:focus::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2000px;
+            left: 0;
+            top: -1000px;
+            background-color: gray;
+            z-index: -2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td tabindex="-1" id="id01"></td>
+            <td tabindex="-1" id="id02"></td>
+            <td tabindex="-1" id="id03"></td>
+            <td tabindex="-1" id="id04"></td>
+            <td tabindex="-1" id="id05"></td>
+            <td tabindex="-1" id="id06"></td>
+            <td tabindex="-1" id="id07"></td>
+            <td tabindex="-1" id="id08"></td>
+            <td tabindex="-1" id="id09"></td>
+            <td tabindex="-1" id="id10"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id11"></td>
+            <td tabindex="-1" id="id12"></td>
+            <td tabindex="-1" id="id13"></td>
+            <td tabindex="-1" id="id14"></td>
+            <td tabindex="-1" id="id15"></td>
+            <td tabindex="-1" id="id16"></td>
+            <td tabindex="-1" id="id17"></td>
+            <td tabindex="-1" id="id18"></td>
+            <td tabindex="-1" id="id19"></td>
+            <td tabindex="-1" id="id20"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id21"></td>
+            <td tabindex="-1" id="id22"></td>
+            <td tabindex="-1" id="id23"></td>
+            <td tabindex="-1" id="id24"></td>
+            <td tabindex="-1" id="id25"></td>
+            <td tabindex="-1" id="id26"></td>
+            <td tabindex="-1" id="id27"></td>
+            <td tabindex="-1" id="id28"></td>
+            <td tabindex="-1" id="id29"></td>
+            <td tabindex="-1" id="id30"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id31"></td>
+            <td tabindex="-1" id="id32"></td>
+            <td tabindex="-1" id="id33"></td>
+            <td tabindex="-1" id="id34"></td>
+            <td tabindex="-1" id="id35"></td>
+            <td tabindex="-1" id="id36"></td>
+            <td tabindex="-1" id="id37"></td>
+            <td tabindex="-1" id="id38"></td>
+            <td tabindex="-1" id="id39"></td>
+            <td tabindex="-1" id="id40"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id41"></td>
+            <td tabindex="-1" id="id42"></td>
+            <td tabindex="-1" id="id43"></td>
+            <td tabindex="-1" id="id44"></td>
+            <td tabindex="-1" id="id45"></td>
+            <td tabindex="-1" id="id46"></td>
+            <td tabindex="-1" id="id47"></td>
+            <td tabindex="-1" id="id48"></td>
+            <td tabindex="-1" id="id49"></td>
+            <td tabindex="-1" id="id50"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id51"></td>
+            <td tabindex="-1" id="id52"></td>
+            <td tabindex="-1" id="id53"></td>
+            <td tabindex="-1" id="id54"></td>
+            <td tabindex="-1" id="id55"></td>
+            <td tabindex="-1" id="id56"></td>
+            <td tabindex="-1" id="id57"></td>
+            <td tabindex="-1" id="id58"></td>
+            <td tabindex="-1" id="id58"></td>
+            <td tabindex="-1" id="id60"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id61"></td>
+            <td tabindex="-1" id="id62"></td>
+            <td tabindex="-1" id="id63"></td>
+            <td tabindex="-1" id="id64"></td>
+            <td tabindex="-1" id="id65"></td>
+            <td tabindex="-1" id="id66"></td>
+            <td tabindex="-1" id="id67"></td>
+            <td tabindex="-1" id="id68"></td>
+            <td tabindex="-1" id="id69"></td>
+            <td tabindex="-1" id="id70"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id71"></td>
+            <td tabindex="-1" id="id72"></td>
+            <td tabindex="-1" id="id73"></td>
+            <td tabindex="-1" id="id74"></td>
+            <td tabindex="-1" id="id75"></td>
+            <td tabindex="-1" id="id76"></td>
+            <td tabindex="-1" id="id77"></td>
+            <td tabindex="-1" id="id78"></td>
+            <td tabindex="-1" id="id79"></td>
+            <td tabindex="-1" id="id80"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id81"></td>
+            <td tabindex="-1" id="id82"></td>
+            <td tabindex="-1" id="id83"></td>
+            <td tabindex="-1" id="id84"></td>
+            <td tabindex="-1" id="id85"></td>
+            <td tabindex="-1" id="id86"></td>
+            <td tabindex="-1" id="id87"></td>
+            <td tabindex="-1" id="id88"></td>
+            <td tabindex="-1" id="id89"></td>
+            <td tabindex="-1" id="id90"></td>
+        </tr>
+        <tr>
+            <td tabindex="-1" id="id91"></td>
+            <td tabindex="-1" id="id92"></td>
+            <td tabindex="-1" id="id93"></td>
+            <td tabindex="-1" id="id94"></td>
+            <td tabindex="-1" id="id95"></td>
+            <td tabindex="-1" id="id96"></td>
+            <td tabindex="-1" id="id97"></td>
+            <td tabindex="-1" id="id98"></td>
+            <td tabindex="-1" id="id99"></td>
+            <td tabindex="-1" id="id00"></td>
+        </tr>
+    </table>
+</body>
+</html>
