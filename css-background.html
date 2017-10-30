@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 30px;
+        }
+
+        .google > div {
+            background-image: url(google.png);
+        }
+
+        .logo {
+            width: 155px;
+            height: 60px;
+            background-position: -55px -150px;
+        }
+
+        .play {
+            width: 57px;
+            height: 57px;
+            background-position: -275px -82px;
+        }
+
+        .setting {
+            width: 40px;
+            height: 40px;
+            background-position: -85px -516px;
+        }
+
+        .twitter {
+            background-image: url(twitter.png);
+            width: 100px;
+            height: 100px;
+        }
+
+        .twitter:hover {
+            background-position-x: -2800px;
+            transition: background-position-x 0.5s steps(28);
+        }
+    </style>
+</head>
+<body>
+    <div class="google">
+        <div class="logo"></div>
+        <div class="play"></div>
+        <div class="setting"></div>
+    </div>
+
+    <div class="twitter"></div>
+</body>
+</html>
