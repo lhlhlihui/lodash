@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>某 APP</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(239, 239, 239);
+        }
+
+        #search {
+            position: absolute;
+            top: 1.2vw;
+            left: 2.8vw;
+            width: 94.5vw;
+            height: 10vw;
+            z-index: 100;
+        }
+
+        #top-image {
+            position: relative;
+            width: 100vw;
+        }
+
+        #menu {
+            height: 20vw;
+            width: 100vw;
+            margin-top: -1vw;
+        }
+
+        #menu > div {
+            width: 20vw;
+            height: 18vw;
+            float: left;
+            background-image: url(mobile.jpg);
+            background-size: 100vw;
+        }
+
+        #necessary {
+            background-position: 0 -54vw;
+        }
+
+        #menu-game {
+            background-position: -20vw -54vw;
+        }
+
+        #like {
+            background-position: -40vw -54vw;
+        }
+
+        #shopping {
+            background-position: -60vw -54vw;
+        }
+
+        #red-packet {
+            background-position: -80vw -54vw;
+        }
+
+        .app {
+            background-color: white;
+            height: 72px;
+        }
+
+        .app > * {
+            font-size: x-small;
+            font-weight: 400;
+            display: inline-block;
+            width: 75vw;
+            margin: 0;
+        }
+
+        .app::before {
+            content: url(app.png);
+            float: left;
+            padding: 4px;
+        }
+
+        .app::after {
+            content: '安装';
+            float: right;
+            margin: calc(2vw - 52px) 2vw 0 0;
+            font-size: x-small;
+            color: blue;
+            padding: 6px 12px;
+            border: 1px blue solid;
+            border-radius: 6px;
+        }
+
+        #footer {
+            width: 100vw;
+            height: 12vw;
+            position: fixed;
+            bottom: 0;
+        }
+
+        #footer > div {
+            width: 20vw;
+            height: 12vw;
+            float: left;
+            background-image: url(mobile.jpg);
+            background-size: 100vw;
+        }
+
+        #home-page {
+            background-position: 0 -165vw;
+        }
+
+        #game {
+            background-position: -20vw -165vw;
+        }
+
+        #ranking-list {
+            background-position: -40vw -165vw;
+        }
+
+        #classification {
+            background-position: -60vw -165vw;
+        }
+
+        #me {
+            background-position: -80vw -165vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <input type="search" name="" id="search" placeholder="搜索">
+        <img id="top-image" src="mobile-top.png" alt="图片加载失败">
+    </div>
+    <div id="menu">
+        <div id="necessary"></div>
+        <div id="menu-game"></div>
+        <div id="like"></div>
+        <div id="shopping"></div>
+        <div id="red-packet"></div>
+    </div>
+    <div id="app">
+        <div class="app" id="app1">
+            <h3>网易严选</h3>
+            <h5>时尚购物 | 18.5 M</h5>
+            <p>精选生活好物 大牌制造商 品质保证</p>
+        </div>
+        <div class="app" id="app2">
+            <h3>微博急速版</h3>
+            <h5>聊天社交 | 7.0 M</h5>
+            <p>微博急速版刷微博更快</p>
+        </div>
+        <div class="app" id="app3">
+            <h3>魂斗罗：归来-水下八关</h3>
+            <h5>游戏 | 603.6 M</h5>
+            <p>正统续作，革新射击</p>
+        </div>
+        <div class="app" id="app4">
+            <h3>小米贷款-双11提额</h3>
+            <h5>金融理财 | 6.1 M</h5>
+            <p>11.11放肆花，临时额度限时开启</p>
+        </div>
+        <div class="app" id="app5">
+            <h3>网易严选</h3>
+            <h5>时尚购物 | 18.5 M</h5>
+            <p>精选生活好物 大牌制造商 品质保证</p>
+        </div>
+        <div class="app" id="app6">
+            <h3>网易严选</h3>
+            <h5>时尚购物 | 18.5 M</h5>
+            <p>精选生活好物 大牌制造商 品质保证</p>
+        </div>
+        <div class="app" id="app7">
+            <h3>网易严选</h3>
+            <h5>时尚购物 | 18.5 M</h5>
+            <p>精选生活好物 大牌制造商 品质保证</p>
+        </div>
+        <div class="app" id="app8">
+            <h3>网易严选</h3>
+            <h5>时尚购物 | 18.5 M</h5>
+            <p>精选生活好物 大牌制造商 品质保证</p>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="home-page"></div>
+        <div id="game"></div>
+        <div id="ranking-list"></div>
+        <div id="classification"></div>
+        <div id="me"></div>
+    </div>
+</body>
+</html>
