@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            perspective: 1500px;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        #a,
+        #b {
+            transform-style: preserve-3d;
+            height: 200px;
+            width: 200px;
+        }
+
+        #a > div {
+            height: 200px;
+            width: 200px;
+            border: black solid 10px;
+            position: absolute;
+        }
+
+        #a1 {
+            transform: translateZ(100px);
+        }
+
+        #a2 {
+            transform: translateZ(-100px);
+        }
+
+        #a3 {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        #a4 {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        #a5 {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        #a6 {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        #b {
+            transform: rotateX(0) rotateZ(0);
+            transition: all 20s;
+            perspective: 75000px;
+            margin-top: 100px;
+        }
+
+        #b:hover {
+            transform: rotateX(700deg) rotateZ(3100deg);
+            transition: all 20s;
+        }
+
+        #b > div {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+        }
+        
+        #b1 {
+            transform: translateZ(100px);
+            background-image: linear-gradient(to right bottom, #00f, #f0f), linear-gradient(to left bottom, #0ff, #00f);
+        }
+
+        #b2 {
+            transform: translateZ(-100px);
+            background-image: linear-gradient(to right bottom, #000, #f00), linear-gradient(to left bottom, #000, #0f0);
+        }
+
+        #b3 {
+            transform: rotateY(90deg) translateZ(100px);
+            background-image: linear-gradient(to right bottom, #f0f, #f00), linear-gradient(to left bottom, #ff0, #f00);
+        }
+
+        #b4 {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-image: linear-gradient(to right bottom, #000, #00f), linear-gradient(to left bottom, #0f0, #000);
+        }
+
+        #b5 {
+            transform: rotateX(90deg) translateZ(100px);
+            background-image: linear-gradient(to right bottom, #000, #f00), linear-gradient(to left bottom, #00f, #000);
+        }
+
+        #b6 {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-image: linear-gradient(to right bottom, #0f0, #ff0), linear-gradient(to left bottom, #0f0, #0ff);
+        }
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div id="a1"></div>
+        <div id="a2"></div>
+        <div id="a3"></div>
+        <div id="a4"></div>
+        <div id="a5"></div>
+        <div id="a6"></div>
+    </div>
+    <div id="b">
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+        <div id="b4"></div>
+        <div id="b5"></div>
+        <div id="b6"></div>
+    </div>
+</body>
+</html>
