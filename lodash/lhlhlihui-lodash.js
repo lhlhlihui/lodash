@@ -63,8 +63,8 @@ var lhlhlihui = {
             var valuesContainsX = false;
             for (var y of values) {
                 if (x === y) {
-                valuesContainsX = true;
-                break;
+                    valuesContainsX = true;
+                    break;
                 }
             }
       
