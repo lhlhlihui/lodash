@@ -42,9 +42,9 @@ var lhlhlihui = {
      * @returns {array}        Returns the new concatenated array.
      */
     concat:function(array, values) {
-        var result = [];
+        var result = array;
         for (var i = 0; i < arguments.length; i++) {
-            result.push(arguments[i]);
+            result = result.concat(arguments[i]);
         }
 
         return result;
