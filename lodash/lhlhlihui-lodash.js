@@ -24,13 +24,29 @@ var lhlhlihui = {
      * @returns {array}        Returns the new array of filtered values.
      */
     compact:function(array) {
-            var result = [];
-            for (var i = 0; i < array.length; i++) {
-                if (array[i] !== false && array[i] !== null && array[i] !== 0 && array[i] !== "" && array[i] !== undefined && array[i] !== NaN) {
-                    result.push(array[i]);
-                }
+        var result = [];
+        for (var i = 0; i < array.length; i++) {
+            if (array[i]) {
+                result.push(array[i]);
             }
+        }
 
-            return result;
-        },
+        return result;
+    },
+
+    /**
+     * Creates a new array concatenating array with any additional arrays and/or values.
+     * 
+     * @param {array} array    The array to concatenate.
+     * @param {any} [values]   The values to concatenate.
+     * @returns {array}        Returns the new concatenated array.
+     */
+    concat:function(array, values) {
+        var result = [];
+        for (var i = 0; i < arguments.length; i++) {
+            result.push(arguments[i]);
+        }
+
+        return result;
+    },
 };
