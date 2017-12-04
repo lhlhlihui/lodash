@@ -49,4 +49,30 @@ var lhlhlihui = {
 
         return result;
     },
+
+    /**
+     * Creates an array of array values not included in the other given arrays using SameValueZero for equality comparisons. The order and references of result values are determined by the first array.
+     * 
+     * @param {array} array     The array to inspect.
+     * @param {any} [values]    The values to exclude.
+     * @returns {array}         Returns the new array of filtered values.
+     */
+    difference:function(array, values = []) {
+        var result = [];
+        for (var x of array) {
+            var valuesContainsX = false;
+            for (var y of values) {
+                if (x === y) {
+                valuesContainsX = true;
+                break;
+                }
+            }
+      
+            if (!valuesContainsX) {
+                result.push(x);
+            }
+        }
+
+        return result;
+    },
 };
