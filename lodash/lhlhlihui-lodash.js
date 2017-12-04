@@ -43,7 +43,7 @@ var lhlhlihui = {
      */
     concat:function(array, values) {
         var result = array;
-        for (var i = 0; i < arguments.length; i++) {
+        for (var i = 1; i < arguments.length; i++) {
             result = result.concat(arguments[i]);
         }
 
