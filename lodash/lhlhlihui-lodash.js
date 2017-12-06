@@ -23,7 +23,7 @@ var lhlhlihui = {
      * @param {array} array    The array to compact.
      * @returns {array}        Returns the new array of filtered values.
      */
-    compact:function(array) {
+    compact: function(array) {
         var result = [];
         for (var i = 0; i < array.length; i++) {
             if (array[i]) {
@@ -37,11 +37,11 @@ var lhlhlihui = {
     /**
      * Creates a new array concatenating array with any additional arrays and/or values.
      * 
-     * @param {array} array    The array to concatenate.
-     * @param {any} [values]   The values to concatenate.
-     * @returns {array}        Returns the new concatenated array.
+     * @param {array} array     The array to concatenate.
+     * @param {...*} [values]   The values to concatenate.
+     * @returns {array}         Returns the new concatenated array.
      */
-    concat:function(array, values) {
+    concat: function(array, ...values) {
         var result = array;
         for (var i = 1; i < arguments.length; i++) {
             result = result.concat(arguments[i]);
@@ -53,22 +53,26 @@ var lhlhlihui = {
     /**
      * Creates an array of array values not included in the other given arrays using SameValueZero for equality comparisons. The order and references of result values are determined by the first array.
      * 
-     * @param {array} array     The array to inspect.
-     * @param {any} [values]    The values to exclude.
-     * @returns {array}         Returns the new array of filtered values.
+     * @param {array} array          The array to inspect.
+     * @param {...array} [values]    The values to exclude.
+     * @returns {array}              Returns the new array of filtered values.
      */
-    difference:function(array, values = []) {
+    difference: function(array, ...values) {
         var result = [];
+        const others = values.reduce((mul, val) => {
+            return mul.concat(val);
+        });
+
         for (var x of array) {
-            var valuesContainsX = false;
-            for (var y of values) {
+            var othersContainsX = false;
+            for (var y of others) {
                 if (x === y) {
-                    valuesContainsX = true;
+                    othersContainsX = true;
                     break;
                 }
             }
-      
-            if (!valuesContainsX) {
+
+            if (!othersContainsX) {
                 result.push(x);
             }
         }
