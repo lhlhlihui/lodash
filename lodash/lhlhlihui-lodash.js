@@ -38,7 +38,7 @@ var lhlhlihui = {
      * Creates a new array concatenating array with any additional arrays and/or values.
      * 
      * @param {array} array     The array to concatenate.
-     * @param {...*} [values]   The values to concatenate.
+     * @param {...any} [values]   The values to concatenate.
      * @returns {array}         Returns the new concatenated array.
      */
     concat: function(array, ...values) {
@@ -78,5 +78,23 @@ var lhlhlihui = {
         }
 
         return result;
+    },
+
+    /**
+     * Fills elements of array with value from start up to, but not including, end.
+     * Note: This method mutates array.
+     * 
+     * @param {array} array                    The array to fill.
+     * @param {any} value                      The value to fill array with.
+     * @param {number} [start = 0]             The start position.
+     * @param {number} [end = array.length]    The end position.
+     * @returns {array}                        Returns array.
+     */
+    fill: function(array, value, start = 0, end = array.length) {
+        for (var i = start; i < end; i++) {
+            array[i] = value;
+        }
+
+        return array;
     },
 };
