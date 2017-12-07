@@ -97,4 +97,20 @@ var lhlhlihui = {
 
         return array;
     },
+
+    /**
+     * Iterates over elements of collection and invokes iteratee for each element. The iteratee is invoked with three arguments: (value, index|key, collection). Iteratee functions may exit iteration early by explicitly returning false.
+     * Note: As with other "Collections" methods, objects with a "length" property are iterated like arrays. To avoid this behavior use _.forIn or _.forOwn for object iteration.
+     * 
+     * @param {array | object} collection         The collection to iterate over.
+     * @param {function} [iteratee=_.identity]    The function invoked per iteration.
+     * @returns {any}                             Returns collection.
+     */
+    forEach: function(collection, iteratee = _.identity) {
+        for (var i = 0; i < collection.length; i++) {
+            iteratee(collection[i], i, collection);
+        }
+
+        return collection;
+    },
 };
