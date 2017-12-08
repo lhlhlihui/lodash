@@ -81,6 +81,30 @@ var lhlhlihui = {
     },
 
     /**
+     * Creates a slice of array with n elements dropped from the beginning.
+     * 
+     * @param {array} array       The array to query.
+     * @param {number} [n = 1]    The number of elements to drop.
+     * @returns {array}           Returns the slice of array.
+     */
+    drop: function(array, n = 1) {
+        result = array;
+        return result.slice(n, array.length);
+    },
+
+    /**
+     * Creates a slice of array with n elements dropped from the end.
+     * 
+     * @param {array} array       The array to query.
+     * @param {number} [n = 1]    The number of elements to drop.
+     * @returns {array}           Returns the slice of array.
+     */
+    dropRight: function(array, n = 1) {
+        result = array;
+        return result.slice(0, array.length - n);
+    },
+
+    /**
      * Fills elements of array with value from start up to, but not including, end.
      * Note: This method mutates array.
      * 
