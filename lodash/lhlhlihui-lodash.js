@@ -88,7 +88,7 @@ var lhlhlihui = {
      * @returns {array}           Returns the slice of array.
      */
     drop: function(array, n = 1) {
-        result = array;
+        var result = array;
         return result.slice(n, array.length);
     },
 
@@ -100,9 +100,9 @@ var lhlhlihui = {
      * @returns {array}           Returns the slice of array.
      */
     dropRight: function(array, n = 1) {
-        result = array;
+        var result = array;
         if (n >= array.length) {
-            return array[1];
+            return [array[0]];
         }
 
         return result.slice(0, array.length - n);
@@ -134,6 +134,18 @@ var lhlhlihui = {
      */
     head: function(array) {
         return array[0];
+    },
+
+    /**
+     * Gets all but the last element of array.
+     * 
+     * @param {array} array The array to query.
+     * @returns {array}     Returns the slice of array.
+     */
+    initial: function(array) {
+        var result = array;
+        result.pop();
+        return result;
     },
 
     /**
