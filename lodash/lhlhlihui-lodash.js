@@ -102,7 +102,7 @@ var lhlhlihui = {
     dropRight: function(array, n = 1) {
         var result = array;
         if (n >= array.length) {
-            return [array[0]];
+            return [];
         }
 
         return result.slice(0, array.length - n);
@@ -189,7 +189,49 @@ var lhlhlihui = {
     floor: function(number, precision = 0) {
         return (number * 10 ** precision | 0 ) / 10 ** precision;
     },
-    
+
+    /**
+     * Computes the maximum value of array. If array is empty or falsey, undefined is returned.
+     * 
+     * @param {array} array    The array to iterate over.
+     * @returns {any}          Returns the maximum value.
+     */
+    max: function(array) {
+        if (array.length === 0) {
+            return undefined;
+        }
+
+        var result = -Infinity;
+        for (var i of array) {
+            if (array[i] > result) {
+                result = array[i];
+            }
+        }
+
+        return result;
+    },
+
+    /**
+     * Computes the minimum value of array. If array is empty or falsey, undefined is returned.
+     * 
+     * @param {array} array    The array to iterate over.
+     * @returns {any}          Returns the minimum value.
+     */
+    min: function(array) {
+        if (array.length === 0) {
+            return undefined;
+        }
+
+        var result = Infinity;
+        for (var i of array) {
+            if (array[i] < result) {
+                result = array[i];
+            }
+        }
+
+        return result;
+    },
+
     /**
      * Computes number rounded to precision.
      * 
