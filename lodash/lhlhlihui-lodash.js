@@ -202,7 +202,7 @@ var lhlhlihui = {
         }
 
         var result = -Infinity;
-        for (var i of array) {
+        for (var i = 0; i < array.length; i++) {
             if (array[i] > result) {
                 result = array[i];
             }
@@ -223,7 +223,7 @@ var lhlhlihui = {
         }
 
         var result = Infinity;
-        for (var i of array) {
+        for (var i = 0; i < array.length; i++) {
             if (array[i] < result) {
                 result = array[i];
             }
