@@ -113,4 +113,30 @@ var lhlhlihui = {
 
         return collection;
     },
+    
+    /**
+     * Computes number rounded up to precision.
+     * 
+     * @param {number} number             The number to round up.
+     * @param {number} [precision = 0]    The precision to round up to.
+     * @returns {number}                  Returns the rounded up number.
+     */
+    ceil: function(number, precision = 0) {
+        if (number * 10 ** precision % 1 === 0) {
+            return number;
+        } else {
+            return ((number  * 10 ** precision + 1) | 0 ) / 10 ** precision;
+        }
+    },
+
+    /**
+     * Computes number rounded down to precision.
+     * 
+     * @param {number} number             The number to round down.
+     * @param {number} [precision = 0]    The precision to round down to.
+     * @returns {number}                  Returns the rounded down number.
+     */
+    floor: function(number, precision = 0) {
+        return (number * 10 ** precision | 0 ) / 10 ** precision;
+    },
 };
