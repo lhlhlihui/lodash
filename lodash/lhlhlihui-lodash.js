@@ -101,6 +101,10 @@ var lhlhlihui = {
      */
     dropRight: function(array, n = 1) {
         result = array;
+        if (n >= array.length) {
+            return array[1];
+        }
+
         return result.slice(0, array.length - n);
     },
 
@@ -120,6 +124,16 @@ var lhlhlihui = {
         }
 
         return array;
+    },
+
+    /**
+     * Gets the first element of array.
+     * 
+     * @param {array} array    The array to query.
+     * @returns {any}          Returns the first element of array.
+     */
+    head: function(array) {
+        return array[0];
     },
 
     /**
