@@ -139,4 +139,19 @@ var lhlhlihui = {
     floor: function(number, precision = 0) {
         return (number * 10 ** precision | 0 ) / 10 ** precision;
     },
+    
+    /**
+     * Computes number rounded to precision.
+     * 
+     * @param {number} number             The number to round.
+     * @param {number} [precision = 0]    The precision to round to.
+     * @returns {number}                  Returns the rounded number.
+     */
+    round: function(number, precision = 0) {
+        if (number * 10 ** precision % 1 >= .5) {
+            return ((number  * 10 ** precision + 1) | 0 ) / 10 ** precision;
+        } else {
+            return (number  * 10 ** precision | 0 ) / 10 ** precision;
+        }
+    },
 };
