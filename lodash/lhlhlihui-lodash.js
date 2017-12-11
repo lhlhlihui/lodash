@@ -145,7 +145,7 @@ var lhlhlihui = {
     flattenDeep: function(array) {
         result = array;
         if (array.every(i => isNaN(i))) {
-            flatten(result);
+            result = [].concat(...result);
         }
 
         return result;
@@ -160,12 +160,11 @@ var lhlhlihui = {
      */
     flattenDepth: function(array, depth = 1) {
         result = array;
-        if (depth === 0) {
-            return result;
+        for (; depth > 0; depth--) {
+            result = [].concat(...result);
         }
 
-        flatten(result);
-        depth--;
+        return result;
     },
 
     /**
