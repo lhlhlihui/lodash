@@ -127,6 +127,48 @@ var lhlhlihui = {
     },
 
     /**
+     * Flattens array a single level deep.
+     * 
+     * @param {array} array    The array to flatten.
+     * @returns {array}        Returns the new flattened array.
+     */
+    flatten: function(array) {
+        return [].concat(...array);
+    },
+
+    /**
+     * Recursively flattens array.
+     * 
+     * @param {array} array    The array to flatten.
+     * @returns {array}        Returns the new flattened array.
+     */
+    flattenDeep: function(array) {
+        result = array;
+        if (array.every(i => isNaN(i))) {
+            flatten(result);
+        }
+
+        return result;
+    },
+
+    /**
+     * Recursively flatten array up to depth times.
+     * 
+     * @param {array} array           The array to flatten.
+     * @param {number} [depth = 1]    The maximum recursion depth.
+     * @returns {array}               Returns the new flattened array.
+     */
+    flattenDepth: function(array, depth = 1) {
+        result = array;
+        if (depth === 0) {
+            return result;
+        }
+
+        flatten(result);
+        depth--;
+    },
+
+    /**
      * Gets the first element of array.
      * 
      * @param {array} array    The array to query.
