@@ -294,7 +294,7 @@ var lhlhlihui = {
      * @param {array} pairs    The key-value pairs.
      * @returns {object}       Returns the new object.
      */
-    formPairs: function(pairs) {
+    fromPairs: function(pairs) {
         var obj = {};
         for (var item of pairs) {
             obj[item[0]] = item[1];
