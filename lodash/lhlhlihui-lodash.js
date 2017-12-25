@@ -287,4 +287,56 @@ var lhlhlihui = {
             return (number  * 10 ** precision | 0 ) / 10 ** precision;
         }
     },
+
+    /**
+     * The inverse of _.toPairs; this method returns an object composed from key-value pairs.
+     * 
+     * @param {array} pairs    The key-value pairs.
+     * @returns {object}       Returns the new object.
+     */
+    formPairs: function(pairs) {
+        var obj = {};
+        for (var item of pairs) {
+            obj[item[0]] = item[1];
+        }
+
+        return obj;
+    },
+
+    /**
+     * Gets the index at which the first occurrence of value is found in array using SameValueZero for equality comparisons. If fromIndex is negative, it's used as the offset from the end of array.
+     * 
+     * @param {array} array               The array to inspect.
+     * @param {any} value                 The value to search for.
+     * @param {number} [fromIndex = 0]    The index to search from.
+     * @returns 
+     */
+    indexOf: function(array, value, fromIndex = 0) {
+        for (var i = fromIndex; i < array.length; i++) {
+            if (array[i] === value) return i;
+        }
+    },
+
+    /**
+     * Creates an array of unique values that are included in all given arrays using SameValueZero for equality comparisons. The order and references of result values are determined by the first array.
+     * 
+     * @param {...arrays} [arrays]    The arrays to inspect.
+     * @returns {array}               Returns the new array of intersecting values.
+     */
+    intersection: function(...arrays) {
+        var result = [];
+        var firstArray = arrays[0];
+        for (var item of firstArray) {
+            var existInFirstArray = true;
+            for (var i = 1; i < arrays.length; i++) {
+                if (!arrays[i].includes(item)) {
+                    existInFirstArray = false;
+                }
+            }
+
+            if (existInFirstArray) result.push(item);
+        }
+        
+        return result;
+    },
 };
