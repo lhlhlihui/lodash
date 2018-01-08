@@ -429,6 +429,10 @@ var lhlhlihui = {
      * @returns 
      */
     inRange: function(number, start = 0, end) {
-        return (number > start && number < end) || (number < start && number > end);
+        if (arguments.length === 2) {
+            return (number > start && number < 0) || (number < start && number > 0);
+        } else {
+            return (number > start && number < end) || (number < start && number > end);
+        }
     },
 };
