@@ -393,4 +393,42 @@ var lhlhlihui = {
     sum: function(array) {
         return array.reduce((a, b) => a + b, 0);
     },
+
+    /**
+     * Computes the mean of the values in array.
+     * 
+     * @param {array} array    The array to iterate over.
+     * @returns {number}       Returns the mean.
+     */
+    mean: function(array) {
+        if (array.length % 2 === 0) {
+            return (array[array.length / 2 - 1] + array[array.length / 2]) / 2;
+        } else {
+            return array[(array.length - 1) / 2];
+        }
+    },
+
+    /**
+     * Clamps number within the inclusive lower and upper bounds.
+     * 
+     * @param {number} number     The number to clamp.
+     * @param {number} [lower]    The lower bound.
+     * @param {number} upper      The upper bound.
+     * @returns 
+     */
+    clamp: function(number, lower = -Infinity, upper) {
+        return number > lower ? (number < upper ? number : upper) : lower;
+    },
+
+    /**
+     * Checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.
+     * 
+     * @param {number} number         The number to check.
+     * @param {number} [start = 0]    The start of the range.
+     * @param {number} end            The end of the range.
+     * @returns 
+     */
+    inRange: function(number, start = 0, end) {
+        return (number > start && number < end) || (number < start && number > end);
+    },
 };
