@@ -339,4 +339,58 @@ var lhlhlihui = {
         
         return result;
     },
+
+    /**
+     * Adds two numbers.
+     * 
+     * @param {number} augend    The first number in an addition.
+     * @param {number} addend    The second number in an addition.
+     * @returns {number}         Returns the total.
+     */
+    add: function(augend, addend) {
+        return augend + addend;
+    },
+
+    /**
+     * Divide two numbers.
+     * 
+     * @param {number} dividend    The first number in a division.
+     * @param {number} divisor     The second number in a division.
+     * @returns {number}           Returns the quotient
+     */
+    divide: function(dividend, divisor) {
+        return dividend / divisor;
+    },
+
+    /**
+     * Multiply two numbers.
+     * 
+     * @param {number} multiplier      The first number in a multiplication.
+     * @param {number} multiplicand    The second number in a multiplication.
+     * @returns {number}               Returns the product.
+     */
+    multiply: function(multiplier, multiplicand) {
+        return multiplier * multiplicand;
+    },
+
+    /**
+     * Subtract two numbers.
+     * 
+     * @param {number} minuend       The first number in a subtraction.
+     * @param {number} subtrahend    The second number in a subtraction.
+     * @returns {number}             Returns the difference.
+     */
+    subtract: function(minuend, subtrahend) {
+        return minuend - subtrahend;
+    },
+
+    /**
+     * Computes the sum of the values in array.
+     * 
+     * @param {array} array    The array to iterate over.
+     * @returns {number}       Returns the sum.
+     */
+    sum: function(array) {
+        return array.reduce((a, b) => a + b, 0);
+    },
 };
